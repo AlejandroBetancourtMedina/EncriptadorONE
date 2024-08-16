@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura completa de la ventana */
+    background-color: #ADB5BD; /* Fondo de la página */
+}
+
+.container {
+    display: flex;
+    width: 90%;  /* Ocupa el 90% del ancho de la pantalla */
+    max-width: 1200px; /* Limita el ancho máximo */
+    height: 80vh; /* Altura del 80% de la pantalla */
+    gap: 20px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-panel {
+    background-color: #EA356EA9; /* Color de fondo del panel de entrada */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.right-panel {
+    background-color: #f0f0f0; /* Color de fondo del panel de resultados */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+textarea {
+    width: 100%;
+    height: calc(100% - 60px); /* Ajusta la altura considerando los botones y márgenes */
+    box-sizing: border-box;
+    border: 2px solid #ccc; /* Borde de los cuadros de texto */
+    border-radius: 10px; /* Bordes redondeados */
+    resize: none; /* Evita que el usuario ajuste el tamaño */
+    padding: 10px;
+}
+
+textarea#inputText {
+    background-color: #EA356EA9; /* Color de fondo del área de entrada */
+}
+
+textarea#outputText {
+    background-color: #f0f0f0; /* Color de fondo del panel de resultados */
+    padding-right: 100px; /* Deja espacio para el botón Copiar */
+}
+
+button {
+    margin-top: 10px; /* Espacio encima del botón */
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    border: none;
+    border-radius: 5px;
+}
+
+#encryptButton {
+    background-color: #4CAF50; /* Color de fondo del botón Encriptar */
+    color: white; /* Color del texto del botón */
+}
+
+#decryptButton {
+    background-color: #f44336; /* Color de fondo del botón Desencriptar */
+    color: white; /* Color del texto del botón */
+}
+
+#copyButton {
+    background-color: #007BFF; /* Color de fondo del botón Copiar */
+    color: white; /* Color del texto del botón Copiar */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#warningMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
