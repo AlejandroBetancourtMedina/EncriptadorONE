@@ -6,15 +6,21 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Altura completa de la ventana */
-    background-color: #ADB5BD; /* Fondo de la página */
+    height: 100vh;
+    background-color: #bbd9f7; /* Fondo de la página */
+}
+.imglogo{
+    position: absolute; /* Usa 'absolute' para posicionar la imagen en relación al contenedor más cercano con posición relativa */
+    top: 3%; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    margin: 0
 }
 
 .container {
     display: flex;
-    width: 90%;  /* Ocupa el 90% del ancho de la pantalla */
-    max-width: 1200px; /* Limita el ancho máximo */
-    height: 80vh; /* Altura del 80% de la pantalla */
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
     gap: 20px;
 }
 
@@ -24,62 +30,66 @@ body {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
+    background-color: #f0f0f0;
+    border-radius: 10px;
 }
 
 .left-panel {
-    background-color: #EA356EA9; /* Color de fondo del panel de entrada */
-    border-radius: 10px; /* Bordes redondeados */
-}
-
-.right-panel {
-    background-color: #f0f0f0; /* Color de fondo del panel de resultados */
-    border-radius: 10px; /* Bordes redondeados */
+    background-color: #597ee6a9; /* Color de fondo del panel de entrada */
 }
 
 textarea {
     width: 100%;
-    height: calc(100% - 60px); /* Ajusta la altura considerando los botones y márgenes */
+    flex: 1;
     box-sizing: border-box;
-    border: 2px solid #ccc; /* Borde de los cuadros de texto */
-    border-radius: 10px; /* Bordes redondeados */
-    resize: none; /* Evita que el usuario ajuste el tamaño */
+    border: none; /* Sin bordes */
+    border-radius: 10px;
+    resize: none;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 textarea#inputText {
-    background-color: #EA356EA9; /* Color de fondo del área de entrada */
+    background-color: #597ee6a9; /* Color de fondo del área de entrada */
 }
 
 textarea#outputText {
     background-color: #f0f0f0; /* Color de fondo del panel de resultados */
-    padding-right: 100px; /* Deja espacio para el botón Copiar */
+    padding-right: 100px;
+}
+
+.background-image {
+    background-image: url('Muñeco.png'); /* Ruta a la imagen */
+    background-size: contain; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-position: center; /* Centrar la imagen */
 }
 
 button {
-    margin-top: 10px; /* Espacio encima del botón */
     padding: 10px 20px;
     font-size: 16px;
-    width: 100%; /* Ocupa el ancho completo del contenedor */
+    width: 100%;
     border: none;
     border-radius: 5px;
 }
 
 #encryptButton {
-    background-color: #4CAF50; /* Color de fondo del botón Encriptar */
-    color: white; /* Color del texto del botón */
+    background-color: rgb(135, 194, 121); /* Color de fondo del botón Encriptar */
+    color: white;
+    border: #007BFF;
 }
 
 #decryptButton {
-    background-color: #f44336; /* Color de fondo del botón Desencriptar */
-    color: white; /* Color del texto del botón */
+    background-color: #d87b75; /* Color de fondo del botón Desencriptar */
+    color: white;
+    margin-bottom: 10px; /* Añadido para espaciar del botón Copiar */
 }
 
 #copyButton {
     background-color: #007BFF; /* Color de fondo del botón Copiar */
-    color: white; /* Color del texto del botón Copiar */
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    color: white;
+    width: 100%; /* Ocupa el ancho de la caja de texto */
+    margin-top: auto; /* Asegura que el botón esté siempre abajo */
 }
 
 #warningMessage {
